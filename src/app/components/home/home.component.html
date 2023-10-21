@@ -1,0 +1,76 @@
+<!-- start users -->
+<div class=" Testymonials">
+    <h1 class="title text-center">Testymonials</h1>
+    <div class="row ">
+        <div *ngFor="let user of users" class="col-md-6 my-4 ">
+            <mat-card class="example-card">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img mat-card-avatar class="w-100 h-100 py-2 px-2" src="{{user.avatar}}">
+                    </div>
+                    <div class="col-md-8">
+                        <mat-card-title style="font-weight: 700; font-size: 18px;">{{user.first_name}}</mat-card-title>
+                        <mat-card-subtitle>{{user.last_name}}</mat-card-subtitle> <mat-card-content>
+                            <p style="font-weight: 400; font-size: 14px; color: #22366A;">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, quia qui enim commodi,
+                                hic unde fuga corrupti, architecto ut dolores totam vero? Beatae animi ipsum aut,
+                                repellendus vitae commodi! Modi?
+                            </p>
+                        </mat-card-content>
+                        <div class="icons my-2">
+                            <mat-icon class="icon-color" fontIcon="star"></mat-icon>
+                            <mat-icon class="icon-color" fontIcon="star"></mat-icon>
+                            <mat-icon class="icon-color" fontIcon="star"></mat-icon>
+                            <mat-icon class="icon-color" fontIcon="star"></mat-icon>
+                            <mat-icon class="icon-color" fontIcon="star"></mat-icon>
+                        </div>
+
+
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>
+<!-- end users -->
+<hr>
+<!-- start Contact Us -->
+<div class="contactUs">
+    <h1 class="title text-center my-4">Contact Us</h1>
+    <div class="row">
+        <div class="contact-details d-flex align-items-center justify-content-center py-4" >
+            <div class="col-md-6">
+                <div class="dataFields px-2 py-2 text-center">
+                    <form [formGroup]="contactForm" >
+                        <mat-form-field class="w-100" >
+                            <mat-label>Name</mat-label>
+                            <input matInput formControlName="name" name="name" required type="text" />
+                            <mat-error style="color: red" *ngIf="contactForm.invalid">{{ getErrorMessage() }}
+                            </mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="w-100">
+                            <mat-label>Email</mat-label>
+                            <input matInput formControlName="email" name="email" required type="email" />
+                            <mat-error style="color: red" *ngIf="contactForm.invalid">{{ getErrorMessage() }}
+                            </mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="w-100">
+                            <mat-label>Phone number</mat-label>
+                            <input matInput formControlName="tel" name="tel" required/>
+                            <mat-icon matSuffix>phone</mat-icon>
+                            <mat-error style="color: red" *ngIf="contactForm.invalid">{{ getErrorMessage() }}
+                            </mat-error>
+                          </mat-form-field>
+                        <div class="example-button-row">
+                            <button class="w-50 m-auto" mat-stroked-button color="primary" (click)="send()">Send</button>
+                          </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<!-- end Contact Us -->
+
