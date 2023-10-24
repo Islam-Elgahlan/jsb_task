@@ -1,6 +1,76 @@
+<!-- start banner -->
+<div class="banner d-flex justify-content-center align-items-center">
+    <div class="caption mt-auto">
+        <img src="../../../assets/round_rock.png">
+        <br>
+        <button type="button" class="btn btn-primary my-5 rounded-pill px-3 py-2">Experts</button>
+        <h3>Lorem </h3>
+        <h1> Lorem lorem</h1>
+        <p class="py-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+            the industry's standard dummy text ever since the</p>
+        <button type="button" class="btn btn-primary my-5 rounded-pill px-5 py-2">Help me</button>
+
+    </div>
+</div>
+<!-- end banner -->
+<div class="services container my-5 ">
+    <h1 class="title text-center my-5">Services</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <mat-card class="example-card">
+                <img mat-card-image src="../../../assets/Rectangle 250.png" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                    <h2 class="my-3">Lorem, ipsum.</h2>
+                    <p class="my-3">
+                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                        bred for hunting.
+                    </p>
+                </mat-card-content>
+            </mat-card>
+
+        </div>
+        <div class="col-md-4">
+            <mat-card class="example-card">
+                <img mat-card-image src="../../../assets/Rectangle 250 (1).png" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                    <h2 class="my-3">Lorem, ipsum.</h2>
+                    <p class="my-3">
+                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                        bred for hunting.
+                    </p>
+                </mat-card-content>
+            </mat-card>
+
+        </div>
+        <div class="col-md-4">
+            <mat-card class="example-card">
+                <img mat-card-image src="../../../assets/Rectangle 250 (2).png" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                    <h2 class="my-3">Lorem, ipsum.</h2>
+                    <p class="my-3">
+                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                        bred for hunting.
+                    </p>
+                </mat-card-content>
+            </mat-card>
+
+        </div>
+    </div>
+    <div class="butt text-center"> <button type="button"
+            class=" text-center btn btn-primary my-5 rounded-pill px-5 py-2">Help me</button>
+    </div>
+</div>
+<!-- start services -->
+
+<!-- end services -->
+
+
 <!-- start users -->
-<div class=" Testymonials">
-    <h1 class="title text-center">Testymonials</h1>
+<div class="container Testymonials my-5">
+    <h1 class="title text-center my-5">Testymonials</h1>
     <div class="row ">
         <div *ngFor="let user of users" class="col-md-6 my-4 ">
             <mat-card class="example-card">
@@ -35,14 +105,14 @@
 <!-- end users -->
 <hr>
 <!-- start Contact Us -->
-<div class="contactUs">
+<div class="container contactUs my-5">
     <h1 class="title text-center my-4">Contact Us</h1>
     <div class="row">
-        <div class="contact-details d-flex align-items-center justify-content-center py-4" >
+        <div class="contact-details d-flex align-items-center justify-content-center py-4">
             <div class="col-md-6">
                 <div class="dataFields px-2 py-2 text-center">
-                    <form [formGroup]="contactForm" >
-                        <mat-form-field class="w-100" >
+                    <form [formGroup]="contactForm">
+                        <mat-form-field class="w-100">
                             <mat-label>Name</mat-label>
                             <input matInput formControlName="name" name="name" required type="text" />
                             <mat-error style="color: red" *ngIf="contactForm.invalid">{{ getErrorMessage() }}
@@ -56,14 +126,15 @@
                         </mat-form-field>
                         <mat-form-field class="w-100">
                             <mat-label>Phone number</mat-label>
-                            <input matInput formControlName="tel" name="tel" required/>
+                            <input matInput formControlName="phone" name="phone" required />
                             <mat-icon matSuffix>phone</mat-icon>
                             <mat-error style="color: red" *ngIf="contactForm.invalid">{{ getErrorMessage() }}
                             </mat-error>
-                          </mat-form-field>
+                        </mat-form-field>
                         <div class="example-button-row">
-                            <button class="w-50 m-auto" mat-stroked-button color="primary" (click)="send()">Send</button>
-                          </div>
+                            <button class="w-50 m-auto rounded-pill " mat-stroked-button color="primary"
+                                (click)="send()">Send</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -73,4 +144,6 @@
     </div>
 </div>
 <!-- end Contact Us -->
-
+<div class="footer">
+    
+</div>

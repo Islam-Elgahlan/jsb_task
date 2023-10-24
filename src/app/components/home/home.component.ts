@@ -28,7 +28,7 @@ export class HomeComponent {
     this.contactForm = this._FormBuilder.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
-      tel: ['', [Validators.required, Validators.minLength(11)]],
+      phone: ['', [Validators.required, Validators.minLength(11)]],
 
     });
   }
@@ -43,8 +43,8 @@ export class HomeComponent {
 
 
   send() {
-    let values = this.prepareFormData()
-    this._HomeService.send(values).subscribe((data) => {
+    
+    this._HomeService.send(this.contactForm.value).subscribe((data) => {
       alert("sent")
     },
       error => {
